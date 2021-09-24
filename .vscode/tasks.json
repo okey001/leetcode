@@ -1,0 +1,26 @@
+{
+    // See https://go.microsoft.com/fwlink/?LinkId=733558
+    // for the documentation about the tasks.json format
+    "version": "2.0.0",
+    "tasks": [
+        {
+            "label": "build active cpp file",
+            "type": "shell",
+            "command": "cl.exe",
+            "args": [//编译时候的参数
+                "/Zi",
+                "/EHsc",
+                "/Fe:",
+                "${fileDirname}\\debug\\${fileBasenameNoExtension}.exe",
+                //"${file}"
+                "${fileDirname}\\*.cpp"
+            ],
+            "group": {
+                "kind": "build",
+                "isDefault": true
+            },
+            // Use the standard MS compiler pattern to detect errors, warnings and infos
+            "problemMatcher": "$msCompile"
+        }
+    ]
+}
