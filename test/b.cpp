@@ -7,9 +7,6 @@ std::vector<int> a(n);
 std::vector<int> b(n);
 int main(int argc, char **argv)
 {
-    
-    
-    
     for (int i = 0; i < n; i++){
         a[i] = rand();
     }
