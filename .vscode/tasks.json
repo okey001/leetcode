@@ -12,8 +12,8 @@
                 "/EHsc",
                 "/Fe:",
                 "${fileDirname}\\debug\\${fileBasenameNoExtension}.exe",
-                //"${file}"
-                "${fileDirname}\\*.cpp"
+                "${file}"
+                //"${fileDirname}\\*.cpp"
             ],
             "group": {
                 "kind": "build",
