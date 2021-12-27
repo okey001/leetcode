@@ -1,0 +1,17 @@
+(1).类结构
+    IInteract               virtual func: "onAction", "onTalk"
+      / | \
+     /  |  \Inherit
+    /   |   \
+   /    |    \
+Door   NPC  Monster         implement "onAction" or "onTalk" or both
+
+    IMoveable               virtual func: "onMoveToNorth", "onMoveToSouth", "onMoveToEast", "onMoveToWest"
+        |
+        |Inherit
+        |   
+        |    
+      Player                implement "onAction" or "onTalk" or both
+
+
+(2).HandleCmd获取命令时，获取玩家player与目标target。若命令为移动命令则调用player的对应方法，交互命令则分别调用两者的交互方法。
